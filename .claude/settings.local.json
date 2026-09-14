@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /home/malvern/Desktop/code/wacmat/website/css /home/malvern/Desktop/code/wacmat/website/js /home/malvern/Desktop/code/wacmat/website/blog && ls /home/malvern/Desktop/code/wacmat/website)"
+    ],
+    "additionalDirectories": [
+      "/home/malvern/Desktop/code/wacmat/website"
+    ]
+  }
+}

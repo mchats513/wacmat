@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wactrack | See Your Fleet Move, Live</title>
+<meta name="description" content="Wacmat Investments (Wactrack) — GPS fleet tracking, fuel monitoring, SAZ-approved speed governors and vehicle CCTV in Zimbabwe. Move your mouse to see live tracking in action.">
+<link rel="canonical" href="landing-map.html">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230a1626'/%3E%3Cpath d='M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7z' fill='%2322d3ae'/%3E%3Ccircle cx='12' cy='9' r='2.5' fill='%230a1626'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="site-header">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="19" stroke="#22d3ae" stroke-width="2" opacity="0.35"/>
+          <path d="M20 8c-4.4 0-8 3.6-8 8 0 6 8 16 8 16s8-10 8-16c0-4.4-3.6-8-8-8z" fill="#2f6fed"/>
+          <circle cx="20" cy="16" r="3" fill="#fff"/>
+        </svg>
+      </span>
+      <span class="brand__text"><strong>Wactrack</strong><span class="brand__sub">by Wacmat Investments</span></span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="team.html">Team</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <a href="contact.html" class="btn btn--primary btn--sm">Get a Quote</a>
+      <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero — live map variant -->
+  <section class="hero hero--map">
+    <div class="hero__map" id="hero-map" aria-hidden="true"></div>
+    <div class="hero__map-overlay"></div>
+    <div class="container hero__inner">
+      <span class="hero__badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
+        Live Fleet Visibility
+      </span>
+      <h1 class="hero__title">Watch your fleet move, <span class="accent">in real time</span></h1>
+      <p class="hero__subtitle">This is a taste of what our live dashboard feels like. Move your mouse over Harare's road network below and follow the marker — that's the same visibility you get for every vehicle in your fleet, every second of the day.</p>
+      <div class="hero__ctas">
+        <a href="contact.html" class="btn btn--primary">Get a Quote</a>
+        <a href="services.html" class="btn btn--ghost">Explore Services</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat"><strong>SAZ Certified</strong><span>Speed governor installer</span></div>
+        <div class="hero__stat"><strong>24/7</strong><span>Monitoring &amp; support</span></div>
+        <div class="hero__stat"><strong>4-in-1</strong><span>Integrated telematics suite</span></div>
+        <div class="hero__stat"><strong>100 km/h</strong><span>Regulatory compliance</span></div>
+      </div>
+    </div>
+    <span class="hero__map-hint">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+      Move your mouse to track live
+    </span>
+  </section>
+
+  <!-- Trust bar -->
+  <div class="trust-bar">
+    <div class="container trust-bar__row">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> SAZ Approved Installer</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg> VID-Compliant Devices</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon></svg> Harare-Based Team</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg> Same-Day Installation</span>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="section" id="services-summary">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="eyebrow">What We Do</span>
+        <h2>One platform for fleet visibility &amp; safety</h2>
+        <p>Four integrated services — tracking, fuel, compliance and video — installed and supported by a single local team.</p>
+      </div>
+      <div class="grid grid--4">
+        <div class="card service-card" data-tilt data-aos="fade-up">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </span>
+          <h3>GPS Fleet Tracking</h3>
+          <p>Real-time location, route history and geofencing so you always know where your vehicles are.</p>
+          <a class="service-card__link" href="services.html#gps-tracking">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <div class="card service-card" data-tilt data-aos="fade-up" data-aos-delay="100">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+          </span>
+          <h3>Fuel Monitoring</h3>
+          <p>Electronic sensors and analytics that detect wastage or theft, cutting fuel costs fast.</p>
+          <a class="service-card__link" href="services.html#fuel-monitoring">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <div class="card service-card" data-tilt data-aos="fade-up" data-aos-delay="200">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+          </span>
+          <h3>Speed Governors</h3>
+          <p>Supply, installation and certification of SAZ/VID-approved speed limiting devices.</p>
+          <a class="service-card__link" href="services.html#speed-governors">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+        <div class="card service-card" data-tilt data-aos="fade-up" data-aos-delay="300">
+          <span class="icon-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+          </span>
+          <h3>Vehicle CCTV</h3>
+          <p>On-board cameras with live streaming and recorded evidence for security and oversight.</p>
+          <a class="service-card__link" href="services.html#cctv">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USPs -->
+  <section class="section section--muted">
+    <div class="container">
+      <div class="section__header section__header--center">
+        <span class="eyebrow">Why Wactrack</span>
+        <h2>Local expertise, certified compliance</h2>
+        <p>We combine regulatory know-how with hands-on service so your fleet stays legal, visible and efficient.</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="value-item" data-aos="fade-up">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
+          <div><h4>Certified Expertise</h4><p>SAZ/VID-approved installer of speed governors with proven, documented installations.</p></div>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span>
+          <div><h4>Integrated Solutions</h4><p>One provider for tracking, fuel sensing, CCTV and speed limiting — simpler procurement and support.</p></div>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg></span>
+          <div><h4>Local Knowledge</h4><p>Zimbabwe-based, understanding local roads, regulations and language needs.</p></div>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+          <div><h4>Rapid Deployment</h4><p>Same-day or quick installation to keep fleets compliant and on the road.</p></div>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="400">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></span>
+          <div><h4>Competitive Pricing</h4><p>Plans tailored for SMEs and large fleets alike, delivering ROI through fuel and fleet savings.</p></div>
+        </div>
+        <div class="value-item" data-aos="fade-up" data-aos-delay="500">
+          <span class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+          <div><h4>24/7 Support</h4><p>Monitoring capability and technical support around the clock, every day of the year.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="cta-banner" data-aos="zoom-in">
+        <div>
+          <h2>Ready to see this on your own fleet?</h2>
+          <p>Speak to our Harare team about GPS tracking, fuel monitoring, speed governors or CCTV — get a tailored quote today.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="contact.html" class="btn btn--accent">Get a Quote</a>
+          <a href="services.html" class="btn btn--ghost">View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="index.html" class="brand">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="#22d3ae" stroke-width="2" opacity="0.35"/>
+            <path d="M20 8c-4.4 0-8 3.6-8 8 0 6 8 16 8 16s8-10 8-16c0-4.4-3.6-8-8-8z" fill="#2f6fed"/>
+            <circle cx="20" cy="16" r="3" fill="#fff"/>
+          </svg>
+        </span>
+        <span class="brand__text"><strong>Wactrack</strong><span class="brand__sub">by Wacmat Investments</span></span>
+      </a>
+      <p>Harare-based vehicle telematics, fuel monitoring, speed governor and CCTV solutions for fleets across Zimbabwe.</p>
+      <p class="footer__badges">SAZ Approved &middot; VID Compliant</p>
+    </div>
+    <div class="footer__col">
+      <h3>Company</h3>
+      <a href="about.html">About Us</a>
+      <a href="team.html">Our Team</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div class="footer__col">
+      <h3>Services</h3>
+      <a href="services.html#gps-tracking">GPS Fleet Tracking</a>
+      <a href="services.html#fuel-monitoring">Fuel Monitoring</a>
+      <a href="services.html#speed-governors">Speed Governors</a>
+      <a href="services.html#cctv">CCTV &amp; Video</a>
+    </div>
+    <div class="footer__col">
+      <h3>Contact</h3>
+      <address>
+        17013 Sande Crescent, Graniteside, Harare, Zimbabwe<br>
+        <a href="tel:+263773341922">+263 77 334 1922</a><br>
+        <a href="mailto:info@wactrack.co.zw">info@wactrack.co.zw</a>
+      </address>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>&copy; <span id="year"></span> Wacmat Investments (Pvt) Ltd, trading as Wactrack. All rights reserved.</p>
+    <div class="footer__legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/hero-map.js"></script>
+</body>
+</html>
